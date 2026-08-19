@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Giuseppe & Valentina | Save the Date</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+      background: #f7f5f0;
+      color: #292722;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 300;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 35px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .ornament {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 28px;
+      letter-spacing: 8px;
+      margin-bottom: 25px;
+      opacity: 0.75;
+    }
+
+    .save {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 19px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      font-weight: 400;
+    }
+
+    .names {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(55px, 13vw, 90px);
+      font-weight: 400;
+      line-height: 0.95;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+
+    .names span {
+      display: block;
+    }
+
+    .amp {
+      font-size: 34px;
+      font-style: italic;
+      margin: 7px 0;
+      opacity: 0.75;
+    }
+
+    .subtitle {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 21px;
+      letter-spacing: 1px;
+      margin-bottom: 35px;
+    }
+
+    .date {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(30px, 7vw, 45px);
+      letter-spacing: 7px;
+      font-weight: 400;
+      margin-bottom: 18px;
+    }
+
+    .location {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 21px;
+      margin-bottom: 45px;
+    }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      max-width: 500px;
+      margin: 0 auto 45px;
+    }
+
+    .time-box {
+      padding: 10px 4px;
+    }
+
+    .number {
+      display: block;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 34px;
+      line-height: 1;
+      margin-bottom: 7px;
+    }
+
+    .label {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+    .button {
+      display: block;
+      text-decoration: none;
+      color: #292722;
+      border: 1px solid #292722;
+      padding: 14px 20px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background: #292722;
+      color: #f7f5f0;
+    }
+
+    .footer-ornament {
+      margin-top: 38px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 24px;
+      letter-spacing: 8px;
+      opacity: 0.7;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page {
+        padding: 20px 14px;
+      }
+
+      .container {
+        padding: 25px 10px;
+      }
+
+      .names {
+        font-size: 61px;
+      }
+
+      .date {
+        letter-spacing: 4px;
+      }
+
+      .location {
+        font-size: 19px;
+      }
+
+      .countdown {
+        gap: 2px;
+      }
+
+      .number {
+        font-size: 29px;
+      }
+
+      .label {
+        font-size: 8px;
+        letter-spacing: 1px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <div class="container">
+
+      <div class="ornament">✧</div>
+
+      <div class="save">
+        Save the Date
+      </div>
+
+      <div class="names">
+        <span>Giuseppe</span>
+        <div class="amp">&amp;</div>
+        <span>Valentina</span>
+      </div>
+
+      <div class="subtitle">
+        Scopri i dettagli del nostro matrimonio
+      </div>
+
+      <div class="date">
+        31 . 05 . 2027
+      </div>
+
+      <div class="location">
+        Reggia dei Tessali
+      </div>
+
+      <!-- COUNTDOWN -->
+      <div class="countdown">
+
+        <div class="time-box">
+          <span class="number" id="days">00</span>
+          <span class="label">Giorni</span>
+        </div>
+
+        <div class="time-box">
+          <span class="number" id="hours">00</span>
+          <span class="label">Ore</span>
+        </div>
+
+        <div class="time-box">
+          <span class="number" id="minutes">00</span>
+          <span class="label">Minuti</span>
+        </div>
+
+        <div class="time-box">
+          <span class="number" id="seconds">00</span>
+          <span class="label">Secondi</span>
+        </div>
+
+      </div>
+
+      <!-- BUTTONS -->
+      <div class="buttons">
+
+        <!-- Calendario -->
+        <a
+          class="button"
+          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Giuseppe%20%26%20Valentina%20-%20Matrimonio&dates=20270531/20270601&details=Matrimonio%20di%20Giuseppe%20e%20Valentina&location=Reggia%20dei%20Tessali"
+          target="_blank"
+          rel="noopener">
+          ♡ &nbsp; Salva nel calendario
+        </a>
+
+        <!-- Google Maps -->
+        <a
+          class="button"
+          href="https://maps.app.goo.gl/ZPPMgkRpgfUJbUAQ6?g_st=ic"
+          target="_blank"
+          rel="noopener">
+          ♧ &nbsp; Vedi la location
+        </a>
+
+        <!-- RSVP -->
+        <a
+          class="button"
+          href="https://www.matrimonio.com/web/valentina-giuseppe-2027"
+          target="_blank"
+          rel="noopener">
+          ✧ &nbsp; Conferma presenza
+        </a>
+
+      </div>
+
+      <div class="footer-ornament">
+        ✧
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <script>
+
+    // =====================================
+    // DATA DEL MATRIMONIO
+    // =====================================
+
+    const weddingDate = new Date("2027-05-31T00:00:00");
+
+
+    // =====================================
+    // COUNTDOWN
+    // =====================================
+
+    function updateCountdown() {
+
+      const now = new Date();
+
+      const difference = weddingDate - now;
+
+      if (difference <= 0) {
+
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+
+        return;
+      }
+
+      const days = Math.floor(
+        difference / (1000 * 60 * 60 * 24)
+      );
+
+      const hours = Math.floor(
+        (difference / (1000 * 60 * 60)) % 24
+      );
+
+      const minutes = Math.floor(
+        (difference / (1000 * 60)) % 60
+      );
+
+      const seconds = Math.floor(
+        (difference / 1000) % 60
+      );
+
+
+      document.getElementById("days").textContent =
+        String(days).padStart(2, "0");
+
+      document.getElementById("hours").textContent =
+        String(hours).padStart(2, "0");
+
+      document.getElementById("minutes").textContent =
+        String(minutes).padStart(2, "0");
+
+      document.getElementById("seconds").textContent =
+        String(seconds).padStart(2, "0");
+    }
+
+
+    updateCountdown();
+
+    setInterval(updateCountdown, 1000);
+
+  </script>
+
+</body>
+</html>
